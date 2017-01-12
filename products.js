@@ -1,6 +1,6 @@
-function saveData() {
+function saveData(event) {
 	// AJAX code to submit form
-	
+	event.preventDefault();
 	var product = document.getElementById("product").value;
 	var qty = document.getElementById("qty").value;
 	var price = document.getElementById("price").value;
@@ -33,7 +33,7 @@ function saveData() {
 		});
 		
 	}	
-	return true;
+	// return true;
 }
 
 

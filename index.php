@@ -107,7 +107,6 @@ if ($data) {
 	<h4>Add a Product to database.</h4> <br>
 	<p><span class="text-danger">* required field.</span></p>
 	
-	<form id="form" name="form"> 
 	<div class="form-group row">
       <label for="product" class="col-sm-2 col-form-label">Product Name *</label>
       <div class="col-sm-10">
@@ -126,8 +125,9 @@ if ($data) {
         <input type="text" class="form-control" id="price" placeholder="Price per Item (decimal number)" name="price" value="<?= $price ?>">
       </div>
     </div>
+		<form id="data-input" name="form" onsubmit="return saveData(event)"> 
+		<input class="btn btn-success" id="submit" type="submit" name="submit" value= "Submit"> 
 			
-	<input class="btn btn-success" id="submit" onclick="saveData()" type="submit" name="submit" value= "Submit"> 
 	</form>
 	<br>
 	<?php if ($data):?>

@@ -180,4 +180,7 @@ if ($data) {
 		</div>
 	</div>
 	</body>
+	<script>
+		$('#data').load('table.php');
+	</script>
 </html>

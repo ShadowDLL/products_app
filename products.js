@@ -15,7 +15,7 @@ function saveData(event) {
 	else {
 		$.ajax({
 			type: "POST",
-			url: "index.php",	
+			url: "save_form.php",	
 			cache: false,
 			data: query,
 			dataType: "text",

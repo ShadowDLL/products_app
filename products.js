@@ -21,12 +21,13 @@ function saveData(event) {
 			dataType: "text",
 			success: function(html) {
 				if (html.includes("Success")) {
-					// No errors: go home
-					document.getElementById("add").click();
+					// refresh the data
+					$('#data').load('table.php');
+					$('#data-input').get(0).reset();
 				}
 				else {
 					// Escalate the errors, removing all html text
-					alert(html.substring(0, html.indexOf('<!DOCTYPE')).trim());
+					alert(html.trim());
 				}
 				
 			}

@@ -20,7 +20,7 @@ function saveData(event) {
 			data: query,
 			dataType: "text",
 			success: function(html) {
-				if (html.includes("Success")) {
+				if (html.indexOf("Success") > -1) {
 					// refresh the data
 					$('#data').load('table.php');
 					$('#data-input').get(0).reset();
